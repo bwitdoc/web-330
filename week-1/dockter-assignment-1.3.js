@@ -7,7 +7,9 @@
 ; Description: 
 ;===========================================
 */
+var http = require("http");
 
+function processRequest(req, res) {
 // Begin Header
 var header = require('C:/Users/Brittany/Documents/bu-webdev/web-340/GitHub Files/Dockter-header-test.js');
 // End Header
@@ -57,7 +59,10 @@ var cellPhone = new CellPhone("Apple", "iPhone X", "White", "$399.99");
 console.log("")
 console.log("-- DISPLAYING CELL PHONE DETAILS --")
 console.log(cellPhone.getDetails());
+}
+var s = http.createServer(processRequest);
 
+s.listen(8080);
 
 
 // end program
