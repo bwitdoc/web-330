@@ -82,12 +82,13 @@ console.log("");
 driveIt(celica);
 driveIt(fordF150);
 driveIt(wrangler);
+console.log("");
 
 console.log("-- The following vehicles have been added to the racetrack --");
-for (var x = 0; x < racetrack.length; x++);
+for (var x = 0; x < racetrack.length; x++)
 {
     console.log(racetrack[x].constructor.name + ": " + racetrack[x].model);
-}
+};
 
 
 // end program
