@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="dockter-assignment-5.2.css">
+    <title>The Proxy Pattern</title>
+
+    <!-- jquery Reference Library -->
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/5DACB2B0-5003-6543-8B39-D8EE6E4FC44C/main.js"
+      charset="UTF-8"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+        <h2> The Proxy Pattern </h2>
+        <button id="button">Click here!</button>
+        <br/><span id="monitorType"></span>
+    <script>
+      var monitor = {
+        Brand: "Samsung",
+        ItemNumber: "C27JG50",
+        display: function() {
+            $("#monitorType").append("<br/>Brand: " + this.Brand + "<br/>" + "ItemNumber: " + this.ItemNumber);
+            }
+        };
+        // Registering a click event for the button
+        $("#button").click($.proxy(monitor, "display"));
+    </script>
+  </body>
+</html>
